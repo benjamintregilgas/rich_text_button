@@ -1,0 +1,194 @@
+[gd_scene load_steps=4 format=3 uid="uid://e0x5vebmj3ds"]
+
+[ext_resource type="Theme" uid="uid://druc6d8xgc1gn" path="res://rich_text_button/rich_text_button_theme.tres" id="1_8uh7m"]
+[ext_resource type="Script" uid="uid://c1o1ylrnvqacl" path="res://rich_text_button/example/supported_rich_text.gd" id="1_cl0qw"]
+[ext_resource type="Script" uid="uid://bxlpdrhar4mgf" path="res://rich_text_button/rich_text_button.gd" id="2_6uqi0"]
+
+[node name="SupportedRichText" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 25
+theme_override_constants/margin_top = 25
+theme_override_constants/margin_right = 25
+theme_override_constants/margin_bottom = 25
+script = ExtResource("1_cl0qw")
+
+[node name="Options" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Content" type="BaseButton" parent="Options"]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 0
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 2
+auto_translate_mode = 0
+editor_description = ""
+visible = true
+modulate = Color(1, 1, 1, 1)
+self_modulate = Color(1, 1, 1, 1)
+show_behind_parent = false
+top_level = false
+clip_children = 0
+light_mask = 1
+visibility_layer = 1
+z_index = 0
+z_as_relative = true
+y_sort_enabled = false
+texture_filter = 0
+texture_repeat = 0
+material = null
+use_parent_material = false
+clip_contents = false
+custom_minimum_size = Vector2(0, 0)
+layout_direction = 0
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.0
+localize_numeral_system = true
+tooltip_text = ""
+tooltip_auto_translate_mode = 0
+focus_neighbor_left = NodePath("")
+focus_neighbor_top = NodePath("")
+focus_neighbor_right = NodePath("")
+focus_neighbor_bottom = NodePath("")
+focus_next = NodePath("")
+focus_previous = NodePath("")
+focus_mode = 2
+focus_behavior_recursive = 0
+mouse_filter = 0
+mouse_behavior_recursive = 0
+mouse_force_pass_scroll_events = true
+mouse_default_cursor_shape = 0
+accessibility_name = ""
+accessibility_description = ""
+accessibility_live = 0
+accessibility_controls_nodes = Array[NodePath]([])
+accessibility_described_by_nodes = Array[NodePath]([])
+accessibility_labeled_by_nodes = Array[NodePath]([])
+accessibility_flow_to_nodes = Array[NodePath]([])
+theme = ExtResource("1_8uh7m")
+theme_type_variation = &""
+disabled = false
+toggle_mode = false
+button_pressed = false
+action_mode = 1
+button_mask = 1
+keep_pressed_outside = false
+button_group = null
+shortcut = null
+shortcut_feedback = true
+shortcut_in_tooltip = true
+script = ExtResource("2_6uqi0")
+theme_resource = ExtResource("1_8uh7m")
+bbcode_enabled = true
+text = "RichTextButton is a flexible way of adding text to your buttons, with support for [i]italics[/i], [b]bold[/b] and [i][b]both[/b][/i].
+[u]Underline[/u] and [s]strikethrough[/s] work too, including with [u][i]italics[/i][/u], [u][b]bold[/b][/u] and [u][i][b]both[/b][/i][/u].
+
+Text [color=#4cf]color[/color], [fgcolor=#49c9]foreground [color=#4cf]color[/color][/fgcolor]  and  [bgcolor=#49c9]background [color=#4cf]color[/color][/bgcolor]  can be adjusted.
+
+It's also possible to include [img]res://rich_text_button/example/example_img.svg[/img] [font_size=24]custom images![/font_size]
+
+[left]     Left alignment is supported,[/left][center]center alignment is default,[/center][right]and right alignment is also supported.     [/right]
+
+Several effects are also available:    [pulse]Pulse[/pulse]    [wave]Wave[/wave]    [tornado]Tornado[/tornado]    [shake]Shake[/shake]    [rainbow]Rainbow[/rainbow]
+
+[table=2]
+[cell border=#fff3 bg=#fff1 padding=0,0,35,5][ul]
+Tables
+are supported.
+[/ul]
+[/cell]
+[cell border=#fc13 bg=#fc11 padding=0,0,50,5][ol]
+Ordered
+list example.
+[/ol]
+[/cell]
+
+[/table]
+
+You can also create custom tags/effects. For full reference, check the documentation.
+
+"
+metadata/_custom_type_script = "uid://bxlpdrhar4mgf"
+
+[node name="Pause" type="BaseButton" parent="Options"]
+_import_path = NodePath("")
+unique_name_in_owner = false
+process_mode = 3
+process_priority = 0
+process_physics_priority = 0
+process_thread_group = 0
+physics_interpolation_mode = 2
+auto_translate_mode = 0
+editor_description = ""
+visible = true
+modulate = Color(1, 1, 1, 1)
+self_modulate = Color(1, 1, 1, 1)
+show_behind_parent = false
+top_level = false
+clip_children = 0
+light_mask = 1
+visibility_layer = 1
+z_index = 0
+z_as_relative = true
+y_sort_enabled = false
+texture_filter = 0
+texture_repeat = 0
+material = null
+use_parent_material = false
+clip_contents = false
+custom_minimum_size = Vector2(0, 0)
+layout_direction = 0
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 1
+size_flags_stretch_ratio = 1.0
+localize_numeral_system = true
+tooltip_text = ""
+tooltip_auto_translate_mode = 0
+focus_neighbor_left = NodePath("")
+focus_neighbor_top = NodePath("")
+focus_neighbor_right = NodePath("")
+focus_neighbor_bottom = NodePath("")
+focus_next = NodePath("")
+focus_previous = NodePath("")
+focus_mode = 2
+focus_behavior_recursive = 0
+mouse_filter = 0
+mouse_behavior_recursive = 0
+mouse_force_pass_scroll_events = true
+mouse_default_cursor_shape = 0
+accessibility_name = ""
+accessibility_description = ""
+accessibility_live = 0
+accessibility_controls_nodes = Array[NodePath]([])
+accessibility_described_by_nodes = Array[NodePath]([])
+accessibility_labeled_by_nodes = Array[NodePath]([])
+accessibility_flow_to_nodes = Array[NodePath]([])
+theme = ExtResource("1_8uh7m")
+theme_type_variation = &""
+disabled = false
+toggle_mode = true
+button_pressed = false
+action_mode = 1
+button_mask = 1
+keep_pressed_outside = false
+button_group = null
+shortcut = null
+shortcut_feedback = true
+shortcut_in_tooltip = false
+script = ExtResource("2_6uqi0")
+theme_resource = ExtResource("1_8uh7m")
+bbcode_enabled = true
+text = "[u]Pause[/u]"
+metadata/_custom_type_script = "uid://bxlpdrhar4mgf"
+
+[connection signal="toggled" from="Options/Pause" to="." method="_on_pause_toggled"]
