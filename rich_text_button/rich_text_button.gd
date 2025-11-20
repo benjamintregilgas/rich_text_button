@@ -75,13 +75,13 @@ func _init() -> void:
 func _draw() -> void:
 	_update_rtl()
 	
-	if has_focus():
-		var focus_stylebox: StyleBox = get_theme_stylebox("focus", _CLASS_NAME)
-		focus_stylebox.draw(get_canvas_item(), Rect2(Vector2.ZERO, size))
-	
 	var stylebox: StyleBox = _get_current_stylebox()
 	if stylebox:
 		stylebox.draw(get_canvas_item(), Rect2(Vector2.ZERO, size))
+	
+	if has_focus():
+		var focus_stylebox: StyleBox = get_theme_stylebox("focus", _CLASS_NAME)
+		focus_stylebox.draw(get_canvas_item(), Rect2(Vector2.ZERO, size))
 
 
 func _get_minimum_size() -> Vector2:
