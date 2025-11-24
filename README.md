@@ -34,11 +34,11 @@ func _rtb_pressed() -> void:
 
 ### Theming
 
-RichTextButton loads its default theme from the same folder as the script. This custom theme supports RichTextButton's styles.
+RichTextButton loads its default theme from the same folder as the script. By default, this theme matches Godot's default button theme. This custom theme supports RichTextButton's styles.
 
 To customise the theme:
 
-1. In the Inspector after highlighting a RichTextButton node, navigate to the `theme_resource` property (Theme Resource), access the drop down, and make it unique.
+1. In the Inspector after highlighting a RichTextButton node, navigate to the `theme` property (In the Control->Theme Group), access the drop down, and make it unique.
 2. Modify RichTextButton's styles including font colours, font and font size, and style boxes.
 3. Changes will now persist when running the project.
 
@@ -46,7 +46,7 @@ You may also wish to assign a completely separate theme:
 
 ```gdscript
 var rtb = RichTextButton.new()
-rtb.theme_resource = load("res://custom_richtextbutton_theme.tres")
+rtb.theme = load("res://custom_richtextbutton_theme.tres")
 ```
 
 ### Supported BBCode
