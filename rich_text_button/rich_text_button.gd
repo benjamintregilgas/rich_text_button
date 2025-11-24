@@ -35,7 +35,6 @@ const _CLASS_NAME: String = "RichTextButton"
 		theme_resource = value
 		if theme_resource:
 			theme = theme_resource
-
 ## If [code]true[/code], the button's text uses BBCode formatting.
 ## [br]
 ## [b]Note:[/b] This only affects the contents of [member text], not the tag stack.
@@ -52,6 +51,11 @@ const _CLASS_NAME: String = "RichTextButton"
 		if _rtl:
 			_rtl.text = text
 		_update_rtl()
+## Flat buttons don't display decoration.
+@export var flat: bool = false:
+	set(value):
+		flat = value
+		queue_redraw()
 
 
 var _rtl: RichTextLabel = null
@@ -75,9 +79,10 @@ func _init() -> void:
 func _draw() -> void:
 	_update_rtl()
 	
-	var stylebox: StyleBox = _get_current_stylebox()
-	if stylebox:
-		stylebox.draw(get_canvas_item(), Rect2(Vector2.ZERO, size))
+	if not flat:
+		var stylebox: StyleBox = _get_current_stylebox()
+		if stylebox:
+			stylebox.draw(get_canvas_item(), Rect2(Vector2.ZERO, size))
 	
 	if has_focus():
 		var focus_stylebox: StyleBox = get_theme_stylebox("focus", _CLASS_NAME)
