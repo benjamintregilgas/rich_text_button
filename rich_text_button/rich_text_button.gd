@@ -25,16 +25,7 @@ extends BaseButton
 
 const _CLASS_NAME: String = "RichTextButton"
 
-## Theme Resource which supports [RichTextButton]. By default, it comes with
-## the theme located next to the script resource.
-## [br][br]
-## If you wish to make changes to the styling without modifying the provided theme,
-## first make the theme unique.
-@export var theme_resource: Theme = load(get_script().resource_path.get_base_dir() + "/rich_text_button_theme.tres"):
-	set(value):
-		theme_resource = value
-		if theme_resource:
-			theme = theme_resource
+
 ## If [code]true[/code], the button's text uses BBCode formatting.
 ## [br]
 ## [b]Note:[/b] This only affects the contents of [member text], not the tag stack.
@@ -62,9 +53,7 @@ var _rtl: RichTextLabel = null
 
 
 func _init() -> void:
-	if theme_resource:
-		theme = theme_resource
-	else:
+	if not theme:
 		var script_path: String = get_script().resource_path
 		var folder_path: String = script_path.get_base_dir()
 		var theme_path: String = folder_path + "/rich_text_button_theme.tres"
