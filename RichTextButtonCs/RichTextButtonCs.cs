@@ -60,7 +60,9 @@ public partial class RichTextButtonCs : BaseButton
 
     public RichTextButtonCs()
     {
-        Theme ??= ResourceLoader.Load<Theme>("res://RichTextButtonCs/rich_text_button_theme.tres");
+        Theme ??= ResourceLoader.Load<Theme>(
+            $"{GetScript().As<CSharpScript>().ResourcePath.GetBaseDir()}/rich_text_button_theme.tres"
+            );
 
         foreach (var node in GetChildren())
         {
